@@ -70,7 +70,7 @@ function createParticles(cardElement) {
 
 function placeCardInGrid(cardElement) {
     const container = document.getElementById('tarot-container');
-    const emptyCell = Array.from(container.children).find(cell => !cell.classList.contains('occupied'));
+    const emptyCell = Array.from(container.children).find(cell => cell.classList.contains('grid-position') && !cell.classList.contains('occupied'));
 
     if (emptyCell) {
         emptyCell.classList.add('occupied');
