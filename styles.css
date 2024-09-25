@@ -45,7 +45,8 @@ body {
 #deck-container {
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +57,7 @@ body {
     height: 150px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 1s;
+    transition: transform 1s, bottom 1s;
 }
 
 .card.flipped {
@@ -111,7 +112,7 @@ body {
 
 .choices-box {
     position: absolute;
-    right: -150px;
+    left: 120px;
     top: 0;
     width: 140px;
     background-color: rgba(255, 255, 255, 0.8);
