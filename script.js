@@ -74,12 +74,18 @@ function showCardDetails(cardElement, card) {
     detailsBox.className = 'details-box';
     const surprisedPhrases = ["Ah, yes…", "Interesting…", "Oh, I didn't expect you already…"];
     const randomPhrase = surprisedPhrases[Math.floor(Math.random() * surprisedPhrases.length)];
-    const randomChoice = card.choices[Math.floor(Math.random() * card.choices.length)];
     detailsBox.innerHTML = `
         <h3>${randomPhrase} ${card.title}</h3>
-        <p>${randomChoice}</p>
+        ${card.choices.map(choice => `<div class="choice">${choice}</div>`).join('')}
     `;
     cardElement.appendChild(detailsBox);
+
+    detailsBox.querySelectorAll('.choice').forEach(choice => {
+        choice.addEventListener('click', () => {
+            alert(`You chose: ${choice.textContent}`);
+            detailsBox.remove();
+        });
+    });
 }
 
 function placeCardInGrid(cardElement) {
