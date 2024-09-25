@@ -6,6 +6,7 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: #f0f0f0;
+    overflow: hidden;
 }
 
 #tarot-container {
@@ -13,6 +14,15 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+#deck-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card {
@@ -23,10 +33,19 @@ body {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: absolute;
+    bottom: -200px;
+    transition: bottom 1s ease-in-out;
 }
 
 .card img {
     max-width: 100px;
     height: auto;
     margin-bottom: 10px;
+}
+
+.deck-card {
+    width: 100px;
+    cursor: pointer;
+    margin-top: -20px;
 }
