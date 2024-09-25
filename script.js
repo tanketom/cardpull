@@ -68,7 +68,7 @@ function displayCard(card, choices, isReversed) {
         cardElement.style.transform = 'translateY(50%)';
         createParticles(cardElement);
         cardElement.classList.add('flipped');
-        showCardDetails(cardElement, card, choices);
+        showCardChoices(cardElement, card, choices);
     }, 100);
 
     // Add click event to place the card in the grid
@@ -83,21 +83,21 @@ function createParticles(cardElement) {
     }
 }
 
-function showCardDetails(cardElement, card, choices) {
-    const detailsBox = document.createElement('div');
-    detailsBox.className = 'details-box';
+function showCardChoices(cardElement, card, choices) {
+    const choicesBox = document.createElement('div');
+    choicesBox.className = 'choices-box';
     const surprisedPhrases = ["Ah, yes…", "Interesting…", "Oh, I didn't expect you already…"];
     const randomPhrase = surprisedPhrases[Math.floor(Math.random() * surprisedPhrases.length)];
-    detailsBox.innerHTML = `
+    choicesBox.innerHTML = `
         <h3>${randomPhrase} ${card.title}</h3>
         ${choices.map(choice => `<div class="choice">${choice}</div>`).join('')}
     `;
-    cardElement.appendChild(detailsBox);
+    cardElement.appendChild(choicesBox);
 
-    detailsBox.querySelectorAll('.choice').forEach(choice => {
+    choicesBox.querySelectorAll('.choice').forEach(choice => {
         choice.addEventListener('click', () => {
             alert(`You chose: ${choice.textContent}`);
-            detailsBox.remove();
+            choicesBox.remove();
         });
     });
 }
