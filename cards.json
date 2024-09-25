@@ -1,21 +1,24 @@
-[
-    {
-        "title": "The Fool",
-        "image": "gfx/the_fool.jpg",
-        "id": "0001",
-        "text": "A new beginning, adventure, and potential."
-    },
-    {
-        "title": "The Magician",
-        "image": "gfx/the_magician.jpg",
-        "id": "0002",
-        "text": "Skill, resourcefulness, and power."
-    },
-    {
-        "title": "The High Priestess",
-        "image": "gfx/the_high_priestess.jpg",
-        "id": "0003",
-        "text": "Intuition, mystery, and wisdom."
-    }
-    // Add more cards as needed
-]
+{
+    "backside": "gfx/backside.jpg",
+    "cards": [
+        {
+            "title": "The Fool",
+            "image": "gfx/the_fool.jpg",
+            "id": "0001",
+            "text": "A new beginning, adventure, and potential."
+        },
+        {
+            "title": "The Magician",
+            "image": "gfx/the_magician.jpg",
+            "id": "0002",
+            "text": "Skill, resourcefulness, and power."
+        },
+        {
+            "title": "The High Priestess",
+            "image": "gfx/the_high_priestess.jpg",
+            "id": "0003",
+            "text": "Intuition, mystery, and wisdom."
+        }
+        // Add more cards as needed
+    ]
+}

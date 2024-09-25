@@ -1,8 +1,9 @@
-document.getElementById('pull-card').addEventListener('click', pullCard);
+document.getElementById('deck').addEventListener('click', pullCard);
 
 async function pullCard() {
     const response = await fetch('cards.json');
-    const cards = await response.json();
+    const data = await response.json();
+    const cards = data.cards;
     const randomCard = cards[Math.floor(Math.random() * cards.length)];
     displayCard(randomCard);
 }
@@ -17,4 +18,10 @@ function displayCard(card) {
         <p>${card.text}</p>
     `;
     container.appendChild(cardElement);
+
+    // Animate the card
+    setTimeout(() => {
+        cardElement.style.bottom = '50%';
+        cardElement.style.transform = 'translateY(50%)';
+    }, 100);
 }
