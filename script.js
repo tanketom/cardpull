@@ -51,19 +51,23 @@ function displayCard(card, choices, isReversed) {
     const cardElement = document.createElement('div');
     cardElement.className = 'card';
     cardElement.innerHTML = `
-        <img src="${card.image}" alt="${card.title}">
-        <div class="card-info">
-            <h3>${card.title} ${isReversed ? '(Reversed)' : ''}</h3>
-            <p>${isReversed ? card.reversed : card.text}</p>
+        <div class="front">
+            <img src="${card.image}" alt="${card.title}">
+            <div class="card-info">
+                <h3>${card.title} ${isReversed ? '(Reversed)' : ''}</h3>
+                <p>${isReversed ? card.reversed : card.text}</p>
+            </div>
         </div>
+        <div class="back"></div>
     `;
     container.appendChild(cardElement);
 
-    // Animate the card to the center
+    // Animate the card to the center and flip it
     setTimeout(() => {
         cardElement.style.bottom = '50%';
         cardElement.style.transform = 'translateY(50%)';
         createParticles(cardElement);
+        cardElement.classList.add('flipped');
         showCardDetails(cardElement, card, choices);
     }, 100);
 
