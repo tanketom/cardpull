@@ -30,21 +30,31 @@ function shuffleArray(array) {
     }
 }
 
-function pullCard(event) {
+async function pullCard(event) {
     const card = JSON.parse(event.target.dataset.card);
-    displayCard(card);
+    const position = document.querySelectorAll('.grid-position.occupied').length + 1;
+    const choices = await fetchChoices(card.title, position);
+    const isReversed = Math.random() < 0.5; // Randomly determine if the card is reversed
+    displayCard(card, choices, isReversed);
     event.target.remove();
 }
 
-function displayCard(card) {
+async function fetchChoices(cardTitle, position) {
+    const response = await fetch('choices.json');
+    const data = await response.json();
+    const positionName = data.positions[position.toString()];
+    return data.choices[cardTitle][positionName];
+}
+
+function displayCard(card, choices, isReversed) {
     const container = document.getElementById('tarot-container');
     const cardElement = document.createElement('div');
     cardElement.className = 'card';
     cardElement.innerHTML = `
         <img src="${card.image}" alt="${card.title}">
         <div class="card-info">
-            <h3>${card.title}</h3>
-            <p>${card.text}</p>
+            <h3>${card.title} ${isReversed ? '(Reversed)' : ''}</h3>
+            <p>${isReversed ? card.reversed : card.text}</p>
         </div>
     `;
     container.appendChild(cardElement);
@@ -54,7 +64,7 @@ function displayCard(card) {
         cardElement.style.bottom = '50%';
         cardElement.style.transform = 'translateY(50%)';
         createParticles(cardElement);
-        showCardDetails(cardElement, card);
+        showCardDetails(cardElement, card, choices);
     }, 100);
 
     // Add click event to place the card in the grid
@@ -69,14 +79,14 @@ function createParticles(cardElement) {
     }
 }
 
-function showCardDetails(cardElement, card) {
+function showCardDetails(cardElement, card, choices) {
     const detailsBox = document.createElement('div');
     detailsBox.className = 'details-box';
     const surprisedPhrases = ["Ah, yes…", "Interesting…", "Oh, I didn't expect you already…"];
     const randomPhrase = surprisedPhrases[Math.floor(Math.random() * surprisedPhrases.length)];
     detailsBox.innerHTML = `
         <h3>${randomPhrase} ${card.title}</h3>
-        ${card.choices.map(choice => `<div class="choice">${choice}</div>`).join('')}
+        ${choices.map(choice => `<div class="choice">${choice}</div>`).join('')}
     `;
     cardElement.appendChild(detailsBox);
 

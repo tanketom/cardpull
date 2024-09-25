@@ -6,242 +6,154 @@
             "image": "gfx/the_fool.jpg",
             "id": "0001",
             "text": "A new beginning, adventure, and potential.",
-            "choices": [
-                "A fresh start is on the horizon.",
-                "Embrace the unknown and take a leap of faith.",
-                "New opportunities are coming your way."
-            ]
+            "reversed": "Foolishness, recklessness, and risk-taking."
         },
         {
             "title": "The Magician",
             "image": "gfx/the_magician.jpg",
             "id": "0002",
             "text": "Skill, resourcefulness, and power.",
-            "choices": [
-                "You have all the tools you need to succeed.",
-                "Harness your inner power and make things happen.",
-                "Your skills and talents are your greatest assets."
-            ]
+            "reversed": "Manipulation, poor planning, and untapped talents."
         },
         {
             "title": "The High Priestess",
             "image": "gfx/the_high_priestess.jpg",
             "id": "0003",
             "text": "Intuition, mystery, and wisdom.",
-            "choices": [
-                "Trust your intuition and inner wisdom.",
-                "Secrets and mysteries are being revealed.",
-                "Listen to your inner voice for guidance."
-            ]
+            "reversed": "Secrets, disconnected from intuition, and withdrawal."
         },
         {
             "title": "The Empress",
             "image": "gfx/the_empress.jpg",
             "id": "0004",
             "text": "Abundance, nurturing, and fertility.",
-            "choices": [
-                "Nurture your ideas and watch them grow.",
-                "Abundance and prosperity are coming your way.",
-                "Embrace your creative and nurturing side."
-            ]
+            "reversed": "Creative block, dependence on others."
         },
         {
             "title": "The Emperor",
             "image": "gfx/the_emperor.jpg",
             "id": "0005",
             "text": "Authority, structure, and control.",
-            "choices": [
-                "Take charge and assert your authority.",
-                "Structure and discipline will lead to success.",
-                "You have the power to create order from chaos."
-            ]
+            "reversed": "Domination, excessive control, lack of discipline."
         },
         {
             "title": "The Hierophant",
             "image": "gfx/the_hierophant.jpg",
             "id": "0006",
             "text": "Tradition, spirituality, and guidance.",
-            "choices": [
-                "Seek guidance from a trusted mentor.",
-                "Embrace tradition and spiritual wisdom.",
-                "Follow the path of knowledge and learning."
-            ]
+            "reversed": "Rebellion, subversiveness, new approaches."
         },
         {
             "title": "The Lovers",
             "image": "gfx/the_lovers.jpg",
             "id": "0007",
             "text": "Love, harmony, and relationships.",
-            "choices": [
-                "A deep connection is forming.",
-                "Harmony and balance in relationships.",
-                "Love and partnership are in the air."
-            ]
+            "reversed": "Disharmony, imbalance, misalignment of values."
         },
         {
             "title": "The Chariot",
             "image": "gfx/the_chariot.jpg",
             "id": "0008",
             "text": "Determination, victory, and control.",
-            "choices": [
-                "Stay focused and determined.",
-                "Victory is within your grasp.",
-                "Take control and steer your course."
-            ]
+            "reversed": "Lack of control, lack of direction, aggression."
         },
         {
             "title": "Strength",
             "image": "gfx/strength.jpg",
             "id": "0009",
             "text": "Courage, patience, and inner strength.",
-            "choices": [
-                "You have the strength to overcome challenges.",
-                "Patience and courage will see you through.",
-                "Inner strength is your greatest ally."
-            ]
+            "reversed": "Self-doubt, weakness, insecurity."
         },
         {
             "title": "The Hermit",
             "image": "gfx/the_hermit.jpg",
             "id": "0010",
             "text": "Introspection, solitude, and guidance.",
-            "choices": [
-                "Take time for introspection and self-discovery.",
-                "Solitude can bring clarity and wisdom.",
-                "Seek guidance from within."
-            ]
+            "reversed": "Isolation, loneliness, withdrawal."
         },
         {
             "title": "Wheel of Fortune",
             "image": "gfx/wheel_of_fortune.jpg",
             "id": "0011",
             "text": "Change, cycles, and destiny.",
-            "choices": [
-                "Embrace the changes coming your way.",
-                "Life is a cycle of ups and downs.",
-                "Destiny is at play in your life."
-            ]
+            "reversed": "Bad luck, resistance to change, breaking cycles."
         },
         {
             "title": "Justice",
             "image": "gfx/justice.jpg",
             "id": "0012",
             "text": "Fairness, truth, and law.",
-            "choices": [
-                "Seek fairness and balance in all things.",
-                "Truth and justice will prevail.",
-                "Make decisions with integrity and honesty."
-            ]
+            "reversed": "Unfairness, lack of accountability, dishonesty."
         },
         {
             "title": "The Hanged Man",
             "image": "gfx/the_hanged_man.jpg",
             "id": "0013",
             "text": "Sacrifice, release, and new perspectives.",
-            "choices": [
-                "Let go of what no longer serves you.",
-                "A new perspective can bring clarity.",
-                "Sacrifice may be necessary for growth."
-            ]
+            "reversed": "Delays, resistance, stalling."
         },
         {
             "title": "Death",
             "image": "gfx/death.jpg",
             "id": "0014",
             "text": "Transformation, endings, and new beginnings.",
-            "choices": [
-                "Embrace transformation and change.",
-                "Endings make way for new beginnings.",
-                "Let go of the old to make room for the new."
-            ]
+            "reversed": "Resistance to change, personal transformation, inner purging."
         },
         {
             "title": "Temperance",
             "image": "gfx/temperance.jpg",
             "id": "0015",
             "text": "Balance, moderation, and harmony.",
-            "choices": [
-                "Seek balance and harmony in your life.",
-                "Moderation is key to success.",
-                "Blend different aspects of your life."
-            ]
+            "reversed": "Imbalance, excess, lack of long-term vision."
         },
         {
             "title": "The Devil",
             "image": "gfx/the_devil.jpg",
             "id": "0016",
             "text": "Bondage, addiction, and materialism.",
-            "choices": [
-                "Break free from what binds you.",
-                "Beware of temptations and addictions.",
-                "Materialism can be a trap."
-            ]
+            "reversed": "Detachment, breaking free, power reclaimed."
         },
         {
             "title": "The Tower",
             "image": "gfx/the_tower.jpg",
             "id": "0017",
             "text": "Sudden change, upheaval, and revelation.",
-            "choices": [
-                "Expect sudden changes and revelations.",
-                "Upheaval can lead to new insights.",
-                "Embrace the chaos for growth."
-            ]
+            "reversed": "Avoidance of disaster, fear of change."
         },
         {
             "title": "The Star",
             "image": "gfx/the_star.jpg",
             "id": "0018",
             "text": "Hope, inspiration, and serenity.",
-            "choices": [
-                "Hope and inspiration are guiding you.",
-                "Find serenity in the midst of chaos.",
-                "Look to the stars for guidance."
-            ]
+            "reversed": "Lack of faith, despair, discouragement."
         },
         {
             "title": "The Moon",
             "image": "gfx/the_moon.jpg",
             "id": "0019",
             "text": "Illusion, intuition, and the subconscious.",
-            "choices": [
-                "Trust your intuition and instincts.",
-                "Illusions may be clouding your judgment.",
-                "Explore your subconscious mind."
-            ]
+            "reversed": "Release of fear, repressed emotion, inner confusion."
         },
         {
             "title": "The Sun",
             "image": "gfx/the_sun.jpg",
             "id": "0020",
             "text": "Joy, success, and positivity.",
-            "choices": [
-                "Joy and success are within reach.",
-                "Positivity will lead to great outcomes.",
-                "Embrace the warmth and light."
-            ]
+            "reversed": "Temporary depression, lack of success."
         },
         {
             "title": "Judgement",
             "image": "gfx/judgement.jpg",
             "id": "0021",
             "text": "Rebirth, inner calling, and absolution.",
-            "choices": [
-                "Answer the call of your inner voice.",
-                "Rebirth and renewal are at hand.",
-                "Seek absolution and forgiveness."
-            ]
+            "reversed": "Self-doubt, refusal of self-examination."
         },
         {
             "title": "The World",
             "image": "gfx/the_world.jpg",
             "id": "0022",
             "text": "Completion, achievement, and fulfillment.",
-            "choices": [
-                "Completion and fulfillment are near.",
-                "Celebrate your achievements.",
-                "You have reached a significant milestone."
-            ]
+            "reversed": "Lack of completion, lack of closure."
         }
     ]
 }
