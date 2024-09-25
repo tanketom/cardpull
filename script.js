@@ -34,7 +34,7 @@ async function pullCard(event) {
     const card = JSON.parse(event.target.dataset.card);
     const position = document.querySelectorAll('.grid-position.occupied').length + 1;
     const choices = await fetchChoices(card.title, position);
-    const isReversed = Math.random() < 0.5; // Randomly determine if the card is reversed
+    const isReversed = Math.random() < 0.15; // 15% chance the card is reversed
     displayCard(card, choices, isReversed);
     event.target.remove();
 }
@@ -51,7 +51,7 @@ function displayCard(card, choices, isReversed) {
     const cardElement = document.createElement('div');
     cardElement.className = 'card';
     cardElement.innerHTML = `
-        <div class="front">
+        <div class="front" style="transform: ${isReversed ? 'rotate(180deg)' : 'rotate(0deg)'};">
             <img src="${card.image}" alt="${card.title}">
             <div class="card-info">
                 <h3>${card.title} ${isReversed ? '(Reversed)' : ''}</h3>
