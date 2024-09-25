@@ -54,6 +54,7 @@ function displayCard(card) {
         cardElement.style.bottom = '50%';
         cardElement.style.transform = 'translateY(50%)';
         createParticles(cardElement);
+        showCardDetails(cardElement, card);
     }, 100);
 
     // Add click event to place the card in the grid
@@ -66,6 +67,19 @@ function createParticles(cardElement) {
         particle.className = 'particle';
         cardElement.appendChild(particle);
     }
+}
+
+function showCardDetails(cardElement, card) {
+    const detailsBox = document.createElement('div');
+    detailsBox.className = 'details-box';
+    const surprisedPhrases = ["Ah, yes…", "Interesting…", "Oh, I didn't expect you already…"];
+    const randomPhrase = surprisedPhrases[Math.floor(Math.random() * surprisedPhrases.length)];
+    const randomChoice = card.choices[Math.floor(Math.random() * card.choices.length)];
+    detailsBox.innerHTML = `
+        <h3>${randomPhrase} ${card.title}</h3>
+        <p>${randomChoice}</p>
+    `;
+    cardElement.appendChild(detailsBox);
 }
 
 function placeCardInGrid(cardElement) {

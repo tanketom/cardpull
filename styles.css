@@ -11,8 +11,11 @@ body {
 
 #tarot-container {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "pos-5 pos-5 pos-6 pos-6 pos-6"
+        "pos-3 pos-1 pos-2 pos-7 pos-7"
+        "pos-4 pos-4 pos-8 pos-8 pos-8"
+        "pos-9 pos-9 pos-10 pos-10 pos-10";
     gap: 10px;
     width: 80%;
     height: 60%;
