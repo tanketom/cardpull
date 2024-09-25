@@ -34,7 +34,7 @@ async function pullCard(event) {
     const card = JSON.parse(event.target.dataset.card);
     const position = document.querySelectorAll('.grid-position.occupied').length + 1;
     const choices = await fetchChoices(card.title, position);
-    const isReversed = Math.random() < 0.15; // 15% chance the card is reversed
+    const isReversed = Math.random() < 0.03; // 3% chance the card is reversed
     displayCard(card, choices, isReversed);
     event.target.remove();
 }
